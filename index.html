@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv ="X-UA-Compatible" content="ie=edge">
+    <title>Umidade do Solo</title>
+</head>   
+<body>
+    <h1>
+        Umidade do Solo
+    </h1>
+    <canvas class="line-chart"></canvas>
+    <script src="./chart.umd.js">
+    </script>
+    <script>
+        var ctx = document.getElementsByClassName("line-chart");
+
+        var chartGraph = new Chart(ctx, {
+            type: 'bar',
+            data:{
+                labels:["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],
+                datasets: [{
+                    label: "Legenda",
+                    data: [5,10,5,14,20,15,6,14,8,12,15,5],
+                    borderWidth: 2,
+                    backgroundColor: 'black',
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
